@@ -7,6 +7,7 @@
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 4fr;
+  gap: 3px;
 }
 
 .container div {
@@ -46,6 +47,10 @@
 
 .sidebar {
   background-color: #FF7755;
+  grid-column: 1;
+  grid-row: 2 / 4;
+  display: grid;
+  gap: 40px;
 }
 
 .sidebar .photo {
@@ -68,14 +73,27 @@
   background-color: #FF7755;
 }
 
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
   list-style: none;
 }
 
+/* .nav ul li:last-child {
+  color: red;
+} */
+
 .article {
   background-color: #bccbde;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+
 }
 
 .article p {
@@ -89,12 +107,14 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  height: 200px;
 }
 
 .card p {
   color: black;
   font-weight: normal;
   font-size: 14px;
+  padding: 5px;
 }
 
 .card .title {
@@ -104,6 +124,7 @@
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / -1;
 }
 
 .footer p {
